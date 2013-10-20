@@ -1,4 +1,4 @@
 slides
 ======
 
-Slides for presentations
+Slides for presentations: http://olostan.github.io/slides/
