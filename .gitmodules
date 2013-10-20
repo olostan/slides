@@ -1,0 +1,3 @@
+[submodule "public/lib/jacss"]
+	path = public/lib/jacss
+	url = git://github.com/olostan/jacss.git

@@ -1,0 +1,17 @@
+<div ng-app='myApp'>
+  <ul class='nav nav-tabs'>
+    <li><a href='#/'>Main</a></li>
+    <li ng-repeat='id in [1,2,3,4,5]'>
+      <a href='#/view/{{id}}'>View {{id}}</a>
+    </li>
+  </ul>
+ 
+  <ng-view></ng-view>
+  <script type='text/ng-template' id='main.html'>
+    Content of main template
+  </script>
+  <script type='text/ng-template' id='view.html'>
+    Viewing {{id}}
+  </script>
+  
+</div>

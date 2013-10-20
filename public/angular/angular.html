@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+	<title>Angular JS: Presentation</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="animate.css">
+
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/angular.js"></script>
+	<script src="libs/angular-resource.js"></script>
+
+    <script type="text/javascript" src="/lib/jacss/jacss.js"></script>
+    
+    <!--script src="/lib/socket.io.js"></script-->
+    <!--script type="text/javascript" src="/lib/jacss/jacss_share.js"></script-->
+	<link href="/lib/jacss/jacss.common.css" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript">
+		jacss.config = { frames : 16, simulate:false };
+	</script>	
+
+
+    <link rel="stylesheet" href="libs/codemirror/codemirror.css">
+    <link rel="stylesheet" href="libs/codemirror/eclipse.css">
+    <script src="libs/codemirror/codemirror.js"></script>
+    <script src="libs/codemirror/xml.js"></script>
+    <script src="libs/codemirror/javascript.js"></script>
+    <script src="libs/codemirror/css.js"></script>
+    <script src="libs/codemirror/htmlmixed.js"></script>
+    <script src="libs/codemirror.js"></script>
+    <script type='text/javascript' src='angular.js'></script>
+    <link href="angular.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+<div id='buttons'>
+<button onclick='jacss.previous();' >&larr;</button><button onclick='jacss.next();' >&rarr;</button><span id='current'>?</span><input id='range' type='range' min="0" max="200" />
+    <button onclick='jacss_share.share();' id="share" >Share</button>
+</div>
+<span width="200px" height="200px" id='cont' ng-app='angularP' ng-controller = 'demoCtrl'>
+	<span id='tlogo'><img src='img/AngularJS-large.png'></span>
+	<span id='ttitle'>HTML enhanced for web apps!</span>
+	<span id='tcomplete'>Complete ecosystem</span>
+	<span id='ttempl'>Templating engine</span>
+		<span id='ttemplbind'>2-way data binding</span>
+        <span id='trouting'>Routing</span>
+		<span id='troutinglazy'>Lazy loading</span>
+	<span id='tdi'>Dependency Injection</span>
+	<span id='ttesting'>Testing</span>
+    <span id='tdirectives'>Components (Directives)</span>
+
+	<span id='tcoding'>Let's code!</span>
+	<span id='tdemo'>
+		<table width='100%'>
+		<tr><td>
+		  <div class="tabbable">
+
+          			<ul class="nav nav-tabs">
+            				<li ng-class="{active:current=='html'}"><a href="" ng-click="current='html'">HTML</a></li>
+            				<li ng-class="{active:current=='js'}"><a href="" ng-click="current='js'">JS</a></li>
+            				<li ng-class="{active:current=='css'}"><a href="" ng-click="current='css'">CSS</a></li>
+		                </ul>
+          		<div class="tab-content">
+			<textarea ui-codemirror="{theme:'eclipse',mode: getMime()}" ng-model='code[current]'></textarea>
+			</div>
+        	  </div>
+		</td><td><span id='preview'><iframe></iframe></span>
+		</td></tr></table>
+        <button class='btn btn-mini pull-right' type="button" ng-click='save()'><i class="icon-hdd" ></i></button>
+	</span>
+	<span id="tqa">Q & A</span>
+</span>
+</body>
+</html>

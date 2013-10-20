@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+	<title>Twinfield | UI</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="jacss.js"></script>
+	<script type="text/javascript" src="jacss_share.js"></script>	
+	<link href="uic.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		jacss.config = { frames : 47, name:"uipres", simulate:false, server:'192.168.1.37:8088' };
+	</script>	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<div id='buttons'>
+<button onclick='jacss.previous();' >&larr;</button><button onclick='jacss.next();' >&rarr;</button><span id='current'>?</span><input id='range' type='range' min="0" max="200" /><button onclick='jacss_share.share();' id="share" >Share</button>
+</div>
+<div id="cont"></div>
+</body>
+</html>

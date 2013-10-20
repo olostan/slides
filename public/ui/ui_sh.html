@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<head>
+	<title>Twinfield | UI</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="jacss.js"></script>
+	<script type="text/javascript" src="jacss_share.js"></script>	
+	<link href="jacss.common.css" rel="stylesheet" type="text/css" />
+	<link href="prism.css" rel="stylesheet" />
+	<link href="ui.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		jacss.config = { frames : 47,name:"uipres", simulate:false, server:'192.168.1.37:8088' };
+	</script>	
+	<script src="prism.js"></script>
+</head>
+<body>
+<div id='buttons'>
+<button onclick='jacss.previous();' >&larr;</button><button onclick='jacss.next();' >&rarr;</button><span id='current'>?</span><input id='range' type='range' min="0" max="200" /><button onclick='jacss_share.share();' id="share" >Share</button>
+</div>
+<div width="100%" height="100%" id='cont'>
+	<span id="tbg"></span>
+	<span id='tlogo'></span>
+	<span id='tui'></span>
+	<span id='tuit'>User Interface</span>
+	<span id="tapp">Application</span>
+	<span id="tbl">Buisness Logic</span>
+	<span id="tpres">Presentation</span>
+	<span id="teye"></span>
+	<span id="tbrain"></span>
+	<span id="tconsumer"></span>
+	<span id="tproducer">Best Producer is</span>
+	<span id="townprod">the one who consumes its<br> own product.</span>
+	<span id="tdogfood">"Eating your own dog food"</span>
+	<span id="twebapp"><span>Web Application</span></span>
+	<span id="tdvds"></span>
+	<span id="tno">NO</span>
+	<span id="tnoinst">Installing</span>
+	<span id="tnoupdate">Updates</span>
+	<span id="twebp">Web  Pages</span>
+	<span id="tserv"></span>
+	<span id="tdata">Data</span>
+	<span id="ttempl">Template</span>
+	<span id="tpage">Page</span>
+	<span id="tuser"></span>
+	<span id="tprobl"></span>
+	<span id="tdiscov">API Discovery</span>
+	<span id="thal">HAL</span>
+	<span id="thyper">Hypertext Application Language</span>
+	<span id="trootr" class='sample'><span class='req'>OPTIONS /SalesInvoicing/api/ HTTP/1.1</span>
+		<pre><code class="language-javascript">
+{
+  "_links": {
+    "self": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/"
+    },
+    "proposedinvoice": {
+      </code><code class="language-javascript highlight">"href": "http://localhost:8180/SalesInvoicing/Api/proposedinvoice/{id}"</code><code class="language-javascript">      
+    },
+    "publishedinvoice": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/publishedinvoice/{id}"
+    },
+    "overview": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/overview"
+    },
+    "paid": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/invoices/paid"
+    },
+    "overdue": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/invoices/overdue"
+    },
+    "due": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/invoices/due"
+    },
+    "proposed": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/invoices/proposed"
+    },
+    "create": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/proposedinvoice"
+    },
+    "vats": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/vats"
+    },
+    "vatrates": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/vatrates/{yyyy-MM-dd}"
+    },
+    "customer": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/customer/{id}"
+    },
+    "createcustomer": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/customer"
+    },
+    "customers": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/customers"
+    },
+    "logo": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/logo/{fileName}"
+    },
+    "uploadlogo": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/logo"
+    },
+    "tasks": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/tasks"
+    },
+    "createarticle": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/article"
+    },
+    "article": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/article/{id}"
+    },
+    "articles": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/articles"
+    },
+    "costcenters": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/costcenters"
+    },
+    "costcenter": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/costcenter/{id}"
+    },
+    "revenuetypes": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/revenuetypes"
+    },
+    "revenuetype": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/revenuetype/{id}"
+    },
+    "createemailtemplate": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/emailtemplate"
+    }
+  }
+}		</code></pre>
+	</span>
+	<span id="tinvr" class='sample'><span class='req'>GET /SalesInvoicing/Api/proposedinvoice/bf64c681-73b0-46eb-b1b5-173f0c0f04e9 HTTP/1.1</span>
+	<pre><code class="language-javascript">{
+  "_links": {
+    "self": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/proposedinvoice/bf64c681-73b0-46eb-b1b5-173f0c0f04e9"
+    },
+    </code><code class="language-javascript highlight">"publish":</code><code class="language-javascript"> {
+      "href": "http://localhost:8180/SalesInvoicing/Api/proposedinvoice/bf64c681-73b0-46eb-b1b5-173f0c0f04e9/publish"
+    },
+    "print": {
+      "href": </code><code class="language-javascript highlight">"http://localhost:8180/SalesInvoicing/Api/proposedinvoice/bf64c681-73b0-46eb-b1b5-173f0c0f04e9/pdf"</code><code class="language-javascript">
+    },
+    "delete": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/proposedinvoice/bf64c681-73b0-46eb-b1b5-173f0c0f04e9"
+    },
+    "update": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/proposedinvoice/bf64c681-73b0-46eb-b1b5-173f0c0f04e9"
+    },
+    "timeline": {
+      "href": "http://localhost:8180/SalesInvoicing/Api/invoice/bf64c681-73b0-46eb-b1b5-173f0c0f04e9/timeline"
+    }
+  },	
+  "invoiceData": {  
+    "customerId": "00e218de-16d0-4c3f-b1b0-a6b41b00abaa",
+    "customerCode": "1000",
+    "customerName": "Legacy Customer",
+    "customerContactPerson": "",
+    "customerAddressLine1": "",
+    "customerAddressLine2": "",
+    "customerPostalCode": "",
+    "customerCity": "",
+    "customerCountry": "NL",
+    "customerVatNumber": null,
+    "companyInfo": "Some info",
+    "invoiceDate": "2013-04-19T00:00:00Z",
+    "dueDate": "2013-05-03T00:00:00Z",
+    "reference": "",
+    "currencyCode": "EUR",
+    "header": "Some header",
+    "footer": "Another footer",
+    "logoFileName": null,
+    "items": [
+      {
+        "description": "Some cool item",
+        "kind": "Taxable",
+        "quantity": 123.0,
+        "quantityPrecision": 0,
+        "quantityHidden": false,
+        "pricePerUnit": 123.0,
+        "vatId": "ea744167-3a6a-4fd4-babe-4c832cac1a09",
+        "articleId": null
+      }
+    ]
+  },
+  "totalIncludingVat": 18003.51,
+  "totalExcludingVat": 15129.0,
+  "lines": [
+    {
+      "description": "Some cool item",
+      "kind": "Taxable",
+      "quantity": 123.0,
+      "quantityPrecision": 0,
+      "quantityHidden": null,
+      "pricePerUnit": 123.0,
+      "vatName": "V 19%",
+      "subtotalIncludingVat": 18003.51,
+      "subtotalExcludingVat": 15129.0
+    }
+  ],
+  "vatLines": [
+    {
+      "vatName": "V 19%",
+      "amount": 2874.51
+    }
+  ],
+  "id": "bf64c681-73b0-46eb-b1b5-173f0c0f04e9",
+  "created": "2013-04-19T08:58:38.9267608Z",
+  "modified": "2013-04-19T08:58:38.9267608Z",
+  "modifiedBy": "VALENTYN",
+  "version": 1
+}			
+		</code></pre>
+	</span>
+	<span id="tresource" class='sample'><span class='req'>ProposedInvoiceInstanceResource.cs</span>
+	<pre><code class="language-java">
+public class ProposedInvoiceInstanceResource : Resource<ProposedInvoiceView>
+{
+		....
+		public override IEnumerable<Link> Links
+		{
+			get
+			{
+				const string routeName = ProposedInvoiceInstanceController.RouteName;
+
+				yield return new Link("self", GetUri(routeName));
+				yield return new Link("publish", GetUri(routeName, new { action = "publish" }));
+				yield return new Link("print", GetUri(ProposedInvoiceInstanceController.RouteName, new { action = "pdf" }));
+				yield return new Link("delete", GetUri(routeName));
+				yield return new Link("update", GetUri(routeName));
+				yield return new Link("timeline", GetUri(TimelineController.RouteName));
+				
+				if (!String.IsNullOrEmpty(Content.InvoiceData.LogoFileName))
+					yield return new Link("logo", GetUri(LogoController.RouteName, new { fileName = Content.InvoiceData.LogoFileName }));
+			}
+		}		
+}
+		</code>
+	</pre></span>	
+  <span id="tlang"><span>Internationalization</span></span>
+  <span id="tintsrc" class='sample'><span class='req'>dashboard.cshtml</span>
+  <pre><code class="language-markup">
+&lt;section class=&quot;content-panel&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;</code><code class="language-javascript highlight">@Common.Sales</code><code class="language-markup">&lt;/div&gt;
+    &lt;div class=&quot;fill&quot; fill&gt;
+        &lt;div ng-controller=&quot;DashboardCtrl&quot;&gt;
+            &lt;div class=&quot;summary-overview&quot; ng-include=&quot;&#39;InvoiceListing/SummaryOverview&#39; | localizedUrl&quot;&gt;&lt;/div&gt;            
+            &lt;twf:actions title=&quot;</code><code class="language-javascript highlight">@Common.Invoicing&quot;&gt;</code><code class="language-markup">
+                &lt;twf:action target=&quot;Invoice&quot; icon=&quot;file&quot; active=&quot;canCreateInvoice()&quot;&gt;&lt;span&gt;@Common.NewInvoice&lt;/span&gt;&lt;/twf:action&gt;
+                &lt;twf:action target=&quot;Articles&quot; icon=&quot;shopping-cart&quot; active=&quot;true&quot;&gt;@Articles.ArticlesTitle&lt;/twf:action&gt;
+                &lt;twf:action target=&quot;Article&quot; icon=&quot;plus-sign-alt&quot; active=&quot;canCreateArticle()&quot;&gt;@Articles.AddArticle&lt;/twf:action&gt;
+                &lt;twf:action target=&quot;Customers&quot; icon=&quot;group&quot; active=&quot;true&quot;&gt;@Customers.CustomersTitle&lt;/twf:action&gt;
+                &lt;twf:action target=&quot;Customer&quot; icon=&quot;user&quot; active=&quot;canCreateCustomer()&quot;&gt;@Customers.AddCustomer&lt;/twf:action&gt;
+                &lt;twf:action target=&quot;EmailTemplate&quot; icon=&quot;envelope&quot; active=&quot;true&quot;&gt;@EmailTemplate.Title&lt;/twf:action&gt;
+            &lt;/twf:actions&gt;            
+            &lt;twf:tasks related-to=&quot;all&quot; /&gt;    
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;  </code>
+  </pre></span> 
+  <span id="tinten" class='sample'><span class='req'>GET /SalesInvoicing/Client/1.18.1.2463/en/Dashboard HTTP/1.1</span>
+  <pre><code class="language-markup">
+&lt;section class=&quot;content-panel&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;</code><code class="language-javascript highlight">Sales</code><code class="language-markup">&lt;/div&gt;
+    &lt;div class=&quot;fill&quot; fill&gt;
+        &lt;div ng-controller=&quot;DashboardCtrl&quot;&gt;
+            &lt;div class=&quot;summary-overview&quot; ng-include=&quot;&#39;InvoiceListing/SummaryOverview&#39; | localizedUrl&quot;&gt;&lt;/div&gt;
+            &lt;twf:actions title=&quot;</code><code class="language-javascript highlight">Invoicing</code><code class="language-markup">&quot;&gt;
+                &lt;twf:action target=&quot;Invoice&quot; icon=&quot;file&quot; active=&quot;canCreateInvoice()&quot;&gt;&lt;span&gt;New Invoice&lt;/span&gt;&lt;/twf:action&gt;
+                &lt;twf:action target=&quot;Articles&quot; icon=&quot;shopping-cart&quot; active=&quot;true&quot;&gt;Articles&lt;/twf:action&gt;
+                &lt;twf:action target=&quot;Article&quot; icon=&quot;plus-sign-alt&quot; active=&quot;canCreateArticle()&quot;&gt;Add article&lt;/twf:action&gt;
+                &lt;twf:action target=&quot;Customers&quot; icon=&quot;group&quot; active=&quot;true&quot;&gt;Customers&lt;/twf:action&gt;
+                &lt;twf:action target=&quot;Customer&quot; icon=&quot;user&quot; active=&quot;canCreateCustomer()&quot;&gt;Add customer&lt;/twf:action&gt;
+                &lt;twf:action target=&quot;EmailTemplate&quot; icon=&quot;envelope&quot; active=&quot;true&quot;&gt;Email template&lt;/twf:action&gt;
+            &lt;/twf:actions&gt;    
+            &lt;twf:tasks related-to=&quot;all&quot; /&gt;    
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code>
+  </pre></span> 
+   <span id="tlocuse" class='sample'><pre><code class="language-markup">&lt;div ng-include=&quot;&#39;TemplateName&#39; | localizedUrl&quot;&gt;&lt;/div&gt;</code></pre></span>
+   <span id="tappinit" class='sample'><span class='title'>index.cshtml</span><pre><code class="language-javascript">angular.module('twinfield.settings')
+      .value('uiOptions', { culture: 'en' })
+      .value('userSettings', {})
+      .value('companySettings', {})
+      .value('templatesVersion', </code><code class="language-javascript highlight">'1.18.1.2463'</code><code class="language-javascript">)
+      .value('rootPath', </code><code class="language-javascript highlight">'/SalesInvoicing/Client/'</code><code class="language-javascript">)
+      .value('apiRoot', '/SalesInvoicing/api/');</code></pre></span>     
+   <span id="tuserinfo" class='sample'><span class='title'>http://localhost:8180/SalesInvoicing/api/</span><pre><code class="language-javascript">{
+  "user": "Valentyn",
+  "companyName": "Testing company",
+  "culture": </code><code class="language-javascript highlight">"en"</code><code class="language-javascript">,...}</code></pre></span>
+  <span id="tlocurl">GET <span class="c1">/SalesInvoicing/Client/</span><span class="c2">1.18.1.2463</span>/<span class="c3">en</span>/TemplateName HTTP/1.1</span>
+  <span id="tlangexp"><pre>Cache-Control: public
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Expires: Sun, 24 Nov 2013 11:25:13 GMT</pre></span>
+  <span id="tbook"></span>
+  <span id="tobey">We try to obay the <span id="stand">Standarts</span></span>
+  <span id="tw3c">W3C: HTML5</span>
+  <span id="trfc">RFC: HTTP</span>
+  <span id="tcodes">
+    <div>200 Ok <span class="desc">I have info for you</span></div>
+    <div>204 No Content <span class="desc">Entity updated</span></div>
+    <div>400 Bad Request <span class="desc">No support</span></div>
+    <div>301 Moved Permanently <span class="desc">Renamed</span></div>
+    <div>405 Method not allowed <span class="desc">Can't post</span></div>
+    <div>201 Created <span class="desc">Entity created</span></div>
+  </span>
+  <span id="tqa"><span>Q&A</span></span> 
+</div>
+</body>
+</html>

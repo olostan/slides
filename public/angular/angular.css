@@ -1,0 +1,251 @@
+    body {
+
+-webkit-box-shadow: inset 0px 0px 170px 5px rgba(13, 123, 123, 1);       
+        box-shadow: inset 0px 0px 70px 5px rgba(123, 73, 73, 1);
+
+background: #f2f2f2; /* Old browsers */
+
+
+	background-repeat:no-repeat;
+}
+#buttons {
+	border: 1px solid #5AF;
+	padding-right: 10px;	
+	padding-bottom: 5px;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#E22));
+	background-image: -moz-linear-gradient(top, #FFF, #A5F); 
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-bottomright: 15px;
+	border-bottom-right-radius: 15px;
+	-moz-box-shadow: 10px 10px 5px #888;
+	box-shadow: 0px 0px 25px #888;
+	opacity: 0.2;
+    -webkit-transition: all 0.2s ease-in-out;
+ 	-moz-transition: all 0.2s ease-in-out;
+ 	-o-transition: all 0.2s ease-in-out;
+
+}
+#buttons:hover {
+	opacity: 1;
+}
+
+#tlogo {
+	left: -240px;
+	top: -170px;
+	visibility: visible;
+	opacity: 0.1;
+}
+
+#ttitle {
+	color: #ffe;
+	font-size: 50px;
+	left: -320px;
+	top: -50px;
+	opacity: 0.2;
+	visibility: visible;
+
+}
+.s1 > #ttitle {
+	opacity: 1;
+		text-shadow: 0px 0px 25px #000;
+}
+.s1 > #tlogo {
+	opacity: 1;
+
+}
+
+.s2 > #ttitle {
+	opacity: 0;
+	top: -400px;
+}
+.s2 > #tlogo {
+	top: -280px;
+	left: 280px;
+	opacity: 0.4;
+}
+
+
+.s2 > #tcomplete {
+	visibility: visible;
+	opacity: 1;
+	left: -400px;
+	top: -50px;
+	font-size: 90px;
+	text-shadow: 0px 0px 25px #911;
+}
+.s3 > #tcomplete {
+	-webkit-transform: rotate(-90deg);
+	font-size: 65px;
+	left: -700px;
+	top: 0px;
+	text-shadow: 0px 0px 5px #911;
+	opacity: 0.5;
+}
+#ttempl, #trouting, #tdi, #ttesting, #tdirectives {
+	left: -300px;
+	top: -500px;
+}
+.s3 > #ttempl, .s6 > #trouting, .s8 > #tdi, .s10 > #ttesting,.s12 > #tdirectives {
+	opacity: 1;
+	visibility: visible;
+	font-size: 90px;
+	top: 0px;
+	text-shadow: 0px 0px 25px #911;
+}
+.s6 > #ttempl {
+	top: -200px;
+	font-size: 50px;
+	text-shadow: 0px 0px 15px #555;
+}
+.s8 > #trouting {
+	top: -100px;
+	font-size: 50px;
+	text-shadow: 0px 0px 15px #555;
+}
+.s10 > #tdi {
+	top: 200px;
+	font-size: 50px;
+	text-shadow: 0px 0px 15px #555;
+}
+.s11 > #ttesting {
+	top: 100px;
+	font-size: 50px;
+	text-shadow: 0px 0px 15px #555;
+}
+    .s13 > #tdirectives {
+        top: 0px;
+        font-size: 50px;
+        text-shadow: 0px 0px 15px #555;
+    }
+
+#tcoding {
+	border-radius: 23px;
+	background-color: rgba(20,20,20,0.8);
+	color: red;
+	border: 1px solid red;
+	font-size: 190px;
+	padding: 100px;
+	text-shadow: 0px 0px 5px #eee;
+	box-shadow: 0px 0px 15px #222;
+	top: -100px;
+	left: -500px;
+}
+.s4 > #tcoding {
+	opacity: 1;
+	visibility: visible;
+	-webkit-animation: "flip" 2s;
+}
+.s5 > #tcoding {
+-webkit-animation: "flipOutX" 2s;
+opacity: 0;
+}
+#tdemo {
+	width: 1300px;	
+	height: 500px;
+	left: -2650px;
+	top: -250px;
+	opacity: 1;
+	visibility: visible;
+	background-color: rgba(200,200,200,0.7);
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.s5 > #tdemo {
+	left: -650px;
+	-webkit-animation: "lightSpeedIn" 1.3s;
+}
+.s6 > #tdemo {
+	-webkit-animation: "lightSpeedOut" 1.3s;
+	left: 1000px;
+}
+.s7 > #tdemo {
+    left: -650px;
+    -webkit-animation: "lightSpeedIn" 1.3s;
+}
+.s8 > #tdemo {
+    -webkit-animation: "lightSpeedOut" 1.3s;
+    left: 1000px;
+}
+.s9 > #tdemo {
+        left: -650px;
+        -webkit-animation: "lightSpeedIn" 1.3s;
+}
+
+.s10 > #tdemo {
+        -webkit-animation: "lightSpeedOut" 1.3s;
+        left: 1000px;
+}
+    .s11 > #tdemo {
+        left: -650px;
+        -webkit-animation: "lightSpeedIn" 1.3s;
+    }
+    .s12 > #tdemo {
+        -webkit-animation: "lightSpeedOut" 1.3s;
+        left: 1000px;
+    }
+
+    .s13 > #tdemo {
+        left: -650px;
+        -webkit-animation: "lightSpeedIn" 1.3s;
+    }
+    .s14 > #tdemo {
+        -webkit-animation: "lightSpeedOut" 1.3s;
+        left: 1000px;
+    }
+    .s15 > #tdemo {
+        left: -650px;
+        -webkit-animation: "lightSpeedIn" 1.3s;
+    }
+    .s16 > #tdemo {
+        -webkit-animation: "lightSpeedOut" 1.3s;
+        left: 1000px;
+    }
+
+
+
+.tab-pane {
+	border: solid 1px #DDD;
+	
+}
+
+.CodeMirror {
+	width: 650px;
+
+}
+.CodeMirror-scroll {
+	height: 400px;
+}
+iframe {
+   margin-top: 57px;
+   border: 1px solid #555;
+   float: right;
+   width: 600px;
+   height: 400px;
+   margin-left: 20px;
+   box-shadow: 0px 0px 20px #222;
+}
+.s14 > #tlogo {
+opacity: 1;
+left: -240px;
+	top: -170px;
+}
+.s14 > #tdi, .s14 > #ttesting, .s14 > #trouting, .s14 > #ttempl, .s14 > #tcomplete, .s14 > #tdirectives {
+   -webkit-transform: scale(5);
+   opacity: 0;
+}
+#tqa {
+  font-size: 180px;
+  visibility: visible;
+  top: 1800px;
+  left: -220px;
+}
+.s14 > #tqa {
+	opacity: 1;
+	visibility: visible;
+	
+	top: 60px;
+}
+.s15 > #tqa {
+    top: -300px;
+}

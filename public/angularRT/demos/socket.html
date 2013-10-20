@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socket example</title>
+    <script type="text/javascript" src="angular.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<div ng-app ng-controller="main">
+    <div>Hello, {{user.name}}</div>
+    <input ng-model="user.name">
+
+    <div ng-repeat="u in users">
+        Your friend: <b>{{u.name}}</b></div>
+
+</div>
+<script type="text/javascript">
+    function main($scope) {
+        function connectToServer() {
+            var socket = io.connect('http://localhost:3333');
+            socket.on('user', function (data) {
+                $scope.$apply(function () {
+                    $scope.user = data;
+                });
+            });
+            $scope.$watch('user', function (nv) {
+                if (nv && socket) socket.emit('user:change', nv);
+            }, true)
+            $scope.users = [];
+            socket.on('user:new', function (data) {
+                $scope.$apply(function () {
+                    $scope.users.push(data);
+                });
+            })
+            socket.on('user:leave', function (data) {
+                $scope.$apply(function () {
+                    $scope.users.slice($scope.users.reduce(function (pv, cv, i) {
+                        return cv.id == data.id ? i : pv
+                    }, undefined), 1)
+                });
+            })
+            socket.on('user:change', function (data) {
+                $scope.$apply(function () {
+                    $scope.users[$scope.users.reduce(function (pv, cv, i) {
+                        return cv.id == data.id ? i : pv
+                    }, undefined)
+                            ] = data.user;
+                });
+            })
+
+        }
+
+        connectToServer();
+    }
+
+</script>
+</body>
+</html>

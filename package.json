@@ -1,0 +1,31 @@
+{
+  "name": "slides",
+  "version": "0.0.1",
+  "description": "Slides for presentations",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/olostan/slides.git"
+  },
+  "keywords": [
+    "jacss",
+    "css3",
+    "html5",
+    "animations",
+    "presentations",
+    "slides"
+  ],
+  "author": "olostan@gmail.com",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "581a4bd876e204ccb26ac0980284b3cb46c4edd6",
+  "bugs": {
+    "url": "https://github.com/olostan/slides/issues"
+  },
+  "dependencies": {
+    "connect": ">2.7.11"
+  }
+}

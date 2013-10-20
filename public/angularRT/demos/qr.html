@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>qr</title>
+    <script src="/qrcode.min.js"></script>
+    <script src="/angular.js"></script>
+    <style type="text/css">
+div { text-align: center;}
+img { display: inline !important;}
+div#url > input { font-size: 38px;font-family: monospace Consolas;width: 80%}
+    </style>
+</head>
+<body ng-app='qr' ng-controller='main'>
+<div id="url"><input ng-model="address"></div>
+<div id="qrcode"></div>
+<script type="text/javascript">
+    angular.module('qr',[]).controller('main',function($scope,$http) {
+            $scope.address='http://plnkr.co/edit/hP7kPBKv8ACJeuA7Xt4U';
+
+            //new QRCode(document.getElementById("qrcode"), "http://localhost");
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: $scope.address,
+                width: 512,
+                height: 512,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+            $scope.$watch('address', function(nv) {
+                qrcode.makeCode(nv);
+            })
+
+    });
+</script>
+</body>
+</html>

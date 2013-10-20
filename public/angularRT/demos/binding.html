@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Binding example</title>
+    <script type="text/javascript" src="angular.js"></script>
+    <style>
+       body, button { font-size: 68px;}
+    </style>
+</head>
+<body>
+    <div ng-app ng-controller="main">
+        <div>Hello, {{user.name}}</div>
+        <input ng-model="user.name">
+        <button ng-click="changeName()">Change</button>
+    </div>
+    <script type="text/javascript">
+        function main($scope) {
+            $scope.user = { name: "Valentyn" };
+            $scope.changeName = function() {
+                $scope.user.name = "Sergey";
+            }
+        }
+    </script>
+</body>
+</html>

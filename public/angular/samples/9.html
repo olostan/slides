@@ -1,0 +1,9 @@
+<div ng-app='myApp'>
+  <div ng-controller='CtrlA'>
+    <label>Controller A:</label> 
+    <input ng-model='shared.X' type='text'>
+  </div>
+  <div ng-controller='CtrlB'>
+    Controller B: <pre>{{ shared | json }}</pre>
+  </div>    
+</div>

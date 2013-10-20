@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>AngularJS: RealTime updates</title>
+    <link href="/lib/jacss/jacss.common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/lib/jacss/jacss.js"></script>
+    <script type="text/javascript">
+		jacss.config = { frames : 25, simulate:false, onBody:true };
+	</script>	
+    <link href="angularRT.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet/less" type="text/css" href="angularRT.less" />
+    <script src="/lib/less.min.js" type="text/javascript"></script>
+    <link href="prism.css" rel="stylesheet" />
+    <script src="prism.js"></script>
+</head>
+<body>
+    <div id='buttons'>
+        <button onclick='jacss.previous();' >&larr;</button><button onclick='jacss.next();' >&rarr;</button><span id='current'>?</span><input id='range' type='range' min="0" max="200" />
+    </div>
+    <div width="100%" height="100%" id='cont'>
+       <span id="tbg"></span>
+	   <span id='tlogo'></span>
+       <span id='trealtime'>
+           <span>Real</span>
+           <span>Time</span>
+           <span>Updates</span>
+       </span>
+       <span id="tmvw">
+           <blockquote>I hereby declare AngularJS to be MVW framework - Model-View-Whatever.
+               <cite>Igor Minar</cite>
+           </blockquote>
+           <a href="https://plus.google.com/+AngularJS/posts/aZNVhj355G2" target="_blank">[source]</a>
+       </span>
+        <span id="tmvw2">
+            <blockquote>Where Whatever stands for "whatever works for you".</blockquote>
+        </span>
+        <span id="tshield"></span>
+        <span id="twarning">Insanity Warning</span>
+        <span id="tcodecrazy">// yes, this code is a bit crazy, but it works and we have tests to prove it!
+            <a href="https://github.com/angular/angular.js/blob/dba566a96d3c660e12249dcb6445dad19854da97/src/ng/rootScope.js#L561" target="_blank">[source]</a>
+        </span>
+        <span id="tview"><pre><code class="language-markup">&lt;div&gt;Hello, {{ user.name }}&lt;/div&gt;</code></pre></span>
+        <span id="tcode"><pre><code class="language-javascript">$scope.user = { name: 'Valentyn' }</code></pre></span>
+        <span id="tview-r"><pre><code class="language-markup">&lt;div&gt;Hello, Valentyn&lt;/div&gt;</code></pre></span>
+        <span id="tpojo">POJO</span>
+        <span id="tcode2"><pre><code class="language-javascript">$scope.user.name = { name: 'Sergey' }</code></pre></span>
+        <span id="tview-r2"><pre><code class="language-markup">&lt;div&gt;Hello,Sergey&lt;/div&gt;</code></pre></span>
+        <span id="tview-c"><pre><code class="language-markup">&lt;div class="ng-binding"&gt;Hello,{{ user.name }}&lt;/div&gt;</code></pre></span>
+        <span id="tview-c-exp"><ol>
+            <li>Parse template</li>
+            <li>Compile into <pre class="language-javascript"><code>function(context) &rarr; string</code></pre></li>
+            <li>Add "watcher" <pre class="language-javascript"><code>$scope.$watch('user.name', ...)</code></pre></li>
+
+        </ol>
+
+        </span>
+        <span id="tcode-s"><pre><code class="language-javascript">function changeName(newName) {
+  $scope.user.name = newName;
+}</code></pre></span>
+        <span id="tcode-call-l"><pre><code class="language-javascript">changeName('x')</code></pre></span>
+        <span id="tcode-call-r"><pre><code class="language-javascript">$scope.$apply(function() {
+  changeName('x');
+});</code></pre></span>
+         <span id="teventl">
+             <div>AngularJS runtime</div>
+             <span>Enter AngularJS context</span>
+             <span>call changeName('x')</span>
+             <span>enter $digest loop</span>
+             <span class="indent">check all $watch expressions</span>
+             <span>Re-render DOM</span>
+         </span>
+         <span id="tdemo">Demo</span>
+         <span id="tqa"><span>Q&A</span></span>
+         <span id="tthank">
+            Thank you!
+         </span>
+        <span id="tself">
+            <div>Valentyn Shybanov</div>
+            <div>http://olostan.name/</div>
+            <div>olostan@gmail.com</div>
+         </span>
+        <span id="tqr">
+
+         </span>
+    </div>
+
+</body>

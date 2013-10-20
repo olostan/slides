@@ -1,0 +1,9 @@
+<html><head><script>function clearStorage() {
+  for(var i in window.localStorage)
+	if (i.substr(0,7)=='sample_') localStorage.removeItem(i);
+}
+clearStorage();
+window.localStorage.setItem("sample_first.css","body {\n  padding: 20px;\n}");
+window.localStorage.setItem("sample_first.html","<div ng-controller='CtrlA' ng-app>\n  {{A}}\n  <div ng-controller='CtrlB'>\n    {{A}} {{B}}\n    <div ng-controller='CtrlC'>\n      {{A}} {{B}} {{C}}\n      <br />\n      Local scope: <input ng-model='A'><br />\n      Parent scope: <input ng-model='$parent.$parent.A'>\n    </div>\n  </div>\n</div>");
+window.localStorage.setItem("sample_first.js","function CtrlA($scope) {\n  $scope.A = 'From A'\n}\nfunction CtrlB($scope) {\n  $scope.B = 'From B'\n}\nfunction CtrlC($scope) {\n  $scope.C = 'From C'\n}");
+</script></head><body>Local Storage imported </body></html>

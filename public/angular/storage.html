@@ -1,0 +1,36 @@
+<html>
+<body>
+<button onclick='doExp()'>Export</button>
+<button onclick='doRun()'>Run</button>
+<br />
+<textarea cols=120 rows=40 id='r'></textarea>
+<script>
+function doExp() {
+  var result = "<html><head><script>";
+  result += clearStorage.toString()+"\nclearStorage();\n";
+  for(var i in window.localStorage) {
+	if (i.substr(0,7)=='sample_') 
+		result+= 'window.localStorage.setItem("'+i+'",'+JSON.stringify(window.localStorage.getItem(i))+");\n";
+  }
+  result += '</'+'script></head><body>Local Storage imported </body></html>';
+  document.getElementById('r').value = result;
+  
+}
+function clearStorage() {
+  for(var i in window.localStorage)
+	if (i.substr(0,7)=='sample_') localStorage.removeItem(i);
+}
+function doRun() {
+   var w = window.open('','win',
+  'width=350,height=50'
+   +',menubar=0'
+   +',toolbar=0'
+   +',status=0'
+   +',scrollbars=0'
+   +',resizable=0, location = 0');
+ w.document.writeln(document.getElementById('r').value);
+ w.document.close();
+}
+</script>
+</body>
+</html>
