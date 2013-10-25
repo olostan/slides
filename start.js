@@ -1,7 +1,7 @@
 var connect = require('connect');
 
-//var oneDay = 86400000;
-var oneDay = 10;
+var oneDay = 86400000;
+//var oneDay = 10;
 
 var port = process.env.PORT || 3000;
 
