@@ -149,7 +149,7 @@ class Awesome {
       <symbol id="angView">View<pre class="prettyprint lang-html">&lt;div person&gt;
   Hi, {<span>{</span>ctrl.person.name}}
 &lt;/div&gt;</pre></symbol>
-      <symbol id="angCtrl">Controller<pre class="prettyprint lang-dart">@NgController(
+      <symbol id="angCtrl">Controller<pre class="prettyprint lang-dart">@Controller(
     selector: '[person]',
     publishAs: 'ctrl'
 )
@@ -167,21 +167,21 @@ class Controller {
         <li>Update model to change the view</li>
       </ul>
       </symbol>
-      <symbol id="angDirDemo">Directives<pre class="prettyprint lang-html">&lt;div ng-repeat=&#39;item in cart.items&#39;&gt;
+      <symbol id="angDirDemo">Decorators<pre class="prettyprint lang-html">&lt;div ng-repeat=&#39;item in cart.items&#39;&gt;
   &lt;span ng-bind=&#39;item.name&#39;&gt;&lt;/span&gt;
   &lt;button ng-click=&#39;cart.delete($index)&#39;&gt;
     Delete
   &lt;/button&gt;
 &lt;/div&gt;</pre></symbol>
       <symbol id="angFilters">
-          Filters:
+          Formatters:
           <pre class="prettyprint lang-html">&lt;p&gt;{<span>{</span> name | reverse }}&lt;/p&gt;</pre>
-          Filters can take parameters:
+          Formatters can take parameters:
           <pre class="prettyprint lang-html">&lt;p&gt;{<span>{</span> amount | currency:us }}&lt;/p&gt;</pre>
-          Filters can chain:
+          Formatters can chain:
           <pre class="prettyprint lang-html">&lt;p&gt;{<span>{</span> msg | embiggen | shoutify }}&lt;/p&gt;</pre>                    
       </symbol>
-      <symbol id="angFilter">Filter<pre class="prettyprint lang-dart">@NgFilter(name: 'reverse')
+      <symbol id="angFilter">Formatter<pre class="prettyprint lang-dart">@Formatter(name: 'reverse')
 class Reverser {
   String call(String input) {
     if (input == null) return '';
@@ -189,7 +189,7 @@ class Reverser {
       .reversed.join('');
   }
 }</pre></symbol>
-      <symbol id="angDI">Dependency Injection<pre class="prettyprint lang-dart">@NgInjectableService() 
+      <symbol id="angDI">Dependency Injection<pre class="prettyprint lang-dart">@Injectable() 
 class Users { /* … */ }
       </pre>
       Usage:
@@ -214,13 +214,13 @@ class Users { /* … */ }
     <symbol id="drums">First appearance in AngularDart!</symbol>
     <symbol id="components">Components</symbol>
     
-    <symbol id="cComponent">ngComponent</symbol>  
+    <symbol id="cComponent">Component</symbol>  
     <symbol id="cController" class="comp">Controller</symbol>  
-    <symbol id="cTemplate" class="comp">Template</symbol>  
+    <symbol id="cTemplate" class="comp">Template (HTML+CSS)</symbol>  
     <symbol id="cShadow" class="comp">Shadow DOM</symbol>  
     <symbol id="cCustom" class="comp">Custom Element Name</symbol>  
 
-    <symbol id="cCode" class="codeSample"><pre class="prettyprint lang-dart">@NgComponent(
+    <symbol id="cCode" class="codeSample"><pre class="prettyprint lang-dart">@Component(
     selector: 'rating',
     templateUrl: 'packages/ng_rating/rating.html',
     cssUrl: 'packages/ng_rating/rating.css',
