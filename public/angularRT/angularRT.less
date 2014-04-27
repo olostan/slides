@@ -475,6 +475,190 @@ body {
     }
   }
 }
+#tserver,#tclient,#tscope,#tview2, #tclient2, #tclient3 {
+  color: white;
+  font-size:60px;
+  border-radius: 30px;
+  border: solid 1px white;
+  padding: 30px;
+  .scaleY(0.2);
+  left:-220px;
+  top:-340px;
+}
+#tclient {
+  left:-240px;
+  top:50px;
+
+}
+.s20 {
+  #tcode-call-l,#tcode-call-r,#tcode-s,#tview-c {
+    .hide();
+  }
+  #teventl {
+    .rotateX(-80deg);
+    opacity: 0;
+  }
+
+  #tserver,#tclient {
+    .visible();
+    .scaleY(1);
+  }
+}
+#tstate {
+  background-color: rgba(200,200,200,0.6);
+  color:yellow;
+  font-size:56px;
+  border-radius: 40px;
+  padding:20px;
+  left:-150px;
+  top:-380px;
+}
+.s21 {
+  #tstate {
+    .visible();
+  }
+  #tserver {
+    box-shadow: 0 0 23px #999;
+    .scale(1.2)
+  }
+  #tclient {
+    opacity: 0.3;
+    .scale(0.8)
+  }
+}
+.s22 {
+  #tstate {
+    top:180px;
+  }
+  #tclient {
+    opacity: 1;
+    box-shadow: 0 0 23px #999;
+    .scale(1.2)
+  }
+
+  #tserver {
+    opacity: 0.3;
+    box-shadow: none;
+    .scale(0.8)
+  }
+}
+#tscope,#tview2 {
+  top: -170px;
+  background-color: rgba(200,250,200,0.3);
+  padding-bottom: 200px;
+  width:300px;
+  text-align: center;
+}
+#tview2 {
+  left:50px;
+}
+
+.s23 {
+  #tserver {
+    top: -450px;
+  }
+  #tclient {
+    top: -300px;
+  }
+  #tstate {
+    top: -20px;
+    .scale(0.7);
+    left:-220px;
+  }
+  #tscope {
+    .visible();
+    .scale(1)
+  }
+}
+
+#twatch {
+  color: #444;
+  text-shadow: 0 0 30px white,0 0 3px white;
+  font-size:80px;
+  .rotate(-90deg);
+  left:-140px;
+  top:-40px;
+}
+.s24 {
+  #tscope {
+    left:-430px;
+  }
+  #tstate {
+    left:30px;
+  }
+  #twatch {
+    .visible();
+  }
+  #tview2 {
+    .visible();
+    .scale(1);
+  }
+}
+.s25 {
+  #tstate {
+    background-color: rgba(250,100,100,0.5);
+  }
+}
+.s26 {
+  #tstate {
+    left:-380px;
+  }
+}
+.s27 {
+  #tscope, #tview2 {
+    top:280px;
+    opacity: 0;
+  }
+  #twatch {
+    opacity: 0;
+  }
+  #tclient {
+    .scale(0.7);
+    top:100px;
+  }
+  #tstate {
+    left: -150px;
+    top:-150px;
+  }
+  #tserver {
+    top:-250px;
+    opacity: 1;
+    .scale(1.2);
+  }
+}
+.s28 {
+  #tserver {
+    .scale(1);
+    top:-300px;
+  }
+  #tstate {
+    top:-50px;
+    left:-180px;
+  }
+  #tclient {
+    .rotate(-50deg);
+    left:100px;
+    top:-70px;
+    box-shadow: none;
+
+  }
+  #tclient2 {
+    .visible();
+    .rotate(0deg);
+    left:-230px;
+    top:120px;
+  }
+  #tclient3 {
+    .visible();
+    .rotate(50deg);
+    left:-530px;
+    top:-70px;
+  }
+  #tstate {
+    background-color: rgba(250,250,250,0.6)
+  }
+
+}
 #tdemo {
   color: #888;
   text-shadow: 0 0 35px black;
@@ -483,15 +667,8 @@ body {
   left:200px;
   .skewX(50deg);
 }
-.s20 {
+.s30 {
   background-color: #999;
-  #tcode-call-l,#tcode-call-r,#tcode-s,#tview-c {
-    .hide();
-  }
-  #teventl {
-    .rotateX(-80deg);
-    opacity: 0;
-  }
   #tdemo {
     .visible();
     left:-170px;
@@ -516,7 +693,7 @@ body {
 
 }
 
-.s21 {
+.s31 {
   background-color: #FFF;
   #teventl {
     .hide();
@@ -534,6 +711,9 @@ body {
 
     }
   }
+  #tclient, #tclient2, #tclient3, #tstate, #tserver {
+    opacity: 0;
+  }
 }
 #tthank {
   color: black;
@@ -542,7 +722,7 @@ body {
   top: -100px;
   .scale(3);
 }
-.s22 {
+.s32 {
   #tqa {
     opacity: 0;
   }
@@ -552,7 +732,7 @@ body {
     .scale(1);
   }
 }
-.s23 {
+.s33 {
   #tthank {
     opacity: 0;
     .scale(0.3);
@@ -585,7 +765,7 @@ body {
   top:-250px;
   box-shadow: 0 0 150px white;
 }
-.s24 {
+.s34 {
   background-color: #777;
   #tthank {
     .hide();
