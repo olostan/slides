@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neo UI</title>
+    
+    <script async type="application/dart" src="twinfield_neoui.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    <script async src="prettify/prettify.js"></script>
+    <script async src="prettify/lang-dart.js"></script>
+    
+    
+    <link rel="stylesheet" href="packages/dacsslide/presentation.css">
+    <link rel="stylesheet" href="prettify/prettify.css">
+    <link rel="stylesheet" href="prettify/sons-of-obsidian.css">
+    <link rel="stylesheet" href="twinfield_neoui.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+  </head>
+  <body onload="prettyPrint()">
+     <background presentation-classes class="back"></background>
+     <background presentation-classes class="front"></background>
+     <presentation slides="40" class="hidden">
+      <symbol id="logo">
+        <img src="img/twinfield.png">
+      </symbol>
+      <symbol id="bg-gen"></symbol>
+      <symbol id="neoUI">MVVM with <img src="img/angularjs-logo.png"></symbol>
+      <symbol id="tasks">Tasks:</symbol>
+      <symbol id="task_cons">Constistent UI</symbol>
+      <symbol id="task_fast">Fast "Screen" developemnt</symbol>
+      <symbol id="task_main">High maintainablility</symbol>
+      <symbol id="task_ab">Easy A/B testing</symbol>
+      
+      <symbol id="designer"><img src="img/website-designer.gif"></symbol>
+      <symbol id="design_list"><img src="img/design_list.png"></symbol>
+      <symbol id="design_list2"><img src="img/design_list.png"></symbol>
+      <symbol id="design_list3"><img src="img/design_list.png"></symbol>
+      
+      <symbol id="no"><img src="img/No.png"></symbol>
+      <symbol id="view-model"><img src="img/vm.png"></symbol>
+      <symbol id="view-model2"><img src="img/vm.png"></symbol>
+      <symbol id="view-model3"><img src="img/vm.png"></symbol>
+      <symbol id="model"><img src="img/model.png"></symbol>
+      
+      <symbol id="vm1" class="code"><pre class="prettyprint lang-html">
+&lt;twf:activity&gt;
+  &lt;twf:list-model&gt; &lt;/twf:list-model&gt; 
+&lt;twf:activity&gt;</pre></symbol>
+      <symbol id="vm2" class="code"><pre class="prettyprint lang-html">
+&lt;twf:activity&gt;
+   &lt;twf:actions primary-stacked=&#39;true&#39; &gt;
+    &lt;twf:action type=&quot;primary&quot; event=&quot;send&quot; &gt;
+        @Invoice.SendByMail&lt;/twf:action&gt;
+    &lt;twf:action type=&quot;primary&quot; event=&quot;sendasattachment&quot; 
+        conditional=&quot;true&quot;&gt;@Invoice.SendAsPdf&lt;/twf:action&gt;
+  &lt;/twf:actions&gt;
+
+  &lt;twf:list-model&gt;&lt;/twf:list-model&gt; 
+&lt;twf:activity&gt;</pre></symbol>
+       <symbol id="design_actions"><img src="img/design_actions.png"></symbol>
+       <symbol id="vm3" class="code"><pre class="prettyprint lang-html">
+&lt;twf:list-model icon=&quot;invoice&quot; source=&quot;getData(query)&quot;
+   search-disabled=&quot;true&quot;&gt;
+    &lt;twf:additional bind=&quot;date&quot; convert=&quot;tfDate&quot; orderable=&quot;desc&quot;&gt;
+        @InvoiceListing.Date&lt;/twf:additional&gt;
+    &lt;twf:primary bind=&quot;customerName&quot; orderable type=&quot;text&quot;&gt;
+        @InvoiceListing.Customer&lt;/twf:primary&gt;
+    &lt;twf:value convert=&quot;totalAmount&quot; orderable order-by=&quot;total&quot; 
+        type=&quot;number&quot;&gt;@InvoiceListing.Amount&lt;/twf:value&gt;
+&lt;/twf:list-model&gt;</pre></symbol>
+      <symbol id="design_list_columns"><img src="img/design_list_columns.png"></symbol>
+      <symbol id="main_rules">Main rules:</symbol>
+      <symbol id="rule_vm_h">View models:</symbol>
+      <symbol id="rule_vm">No any HTML! Gives only hints to environment how <b>model</b> should be presented.</symbol>
+      <symbol id="rule_v_h">Views:</symbol>
+      <symbol id="rule_v">No "screen" specific code. Only <u>generic</u> solutions. Be consistent.</symbol>
+      <symbol id="rule_c_h">Controllers:</symbol>
+      <symbol id="rule_c">Data manipulation. React on User.</symbol>
+      <symbol id="rule_m_h">Models:</symbol>
+      <symbol id="rule_m">No any unformation about how it would be presented. Only <b>data</b>.</symbol>
+      <symbol id="demo">Demo</symbol>
+     </presentation>
+  </body>
+</html>
