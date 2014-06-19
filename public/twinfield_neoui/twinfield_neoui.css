@@ -15,7 +15,21 @@ body,html {
     -webkit-transform:scale(1); 
   }
 }
-
+connection-panel {
+  position: absolute;
+  right: 0px;
+  display: inline-block;
+  opacity: 0.3;
+  -webkit-transition: all 0.2s;  
+  
+}
+connection-panel:hover {
+  opacity: 1;
+}
+connection-panel button {
+  font-size: 14px;
+  border-radius: 20px;
+}
 .hidden { opacity:0; }
 body {
   overflow: hidden;
@@ -28,9 +42,48 @@ body {
   -webkit-filter: drop-shadow(0px 0px 25px white);
   opacity:1; 
 }
+#qr {
+  opacity: 1;
+  -webkit-transform:translateY(200px) scale(0.7);
+  border: solid 2px black;  
+  font-size:0;
+  -webkit-backface-visibility:hidden; /* Chrome, Safari, Opera */
+  backface-visibility:hidden;
+}
 
 .s2  #logo {
     -webkit-transform:translateY(-200px);
+}
+.s2 #qr {
+  -webkit-transform:translateX(-200px) translateY(200px) scale(0.7) rotateY(180deg);
+}
+#qr_vsh {
+  opacity: 1;
+  -webkit-transform:translateY(200px) scale(0.7) rotateY(180deg);
+    -webkit-backface-visibility:hidden; /* Chrome, Safari, Opera */
+  backface-visibility:hidden;
+  border: solid 2px black;
+  font-size:0;
+}
+.s2 #qr_vsh {
+    -webkit-transform:translateX(-200px) translateY(200px) scale(0.7) rotateY(0deg);
+}
+#vsh {
+  -webkit-transform:translateX(240px) translateY(200px) rotateY(-90deg);
+  -webkit-transform-origin: 0% 50%;
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  font-size: 42px;
+  border: solid 1px white;
+  padding: 70px; 
+  padding-right: 150px; 
+  text-shadow: 0 0 4px black;
+}
+#vsh div { font-size: 28px;}
+.s2 #vsh {
+  opacity: 1;
+  -webkit-transform:translateX(240px) translateY(200px);
+  
 }
 
 background {
@@ -90,6 +143,9 @@ background.front.s3 {
   background-color: #131313;
   background-size: 20px 20px;
   opacity:0.8;
+}
+.s3 #vsh, .s3 #qr, .s3 #qr_vsh {
+  opacity: 0;
 }
 .s3 #logo {
   -webkit-filter: none;
