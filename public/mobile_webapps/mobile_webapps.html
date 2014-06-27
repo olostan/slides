@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mobile Web Applications with AngularJS</title>
+ 
+    <script async type="application/dart" src="mobile_webapps.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    <script async src="prettify/prettify.js"></script>
+    
+    <link rel="stylesheet" href="prettify/prettify.css">
+    <link rel="stylesheet" href="prettify/sons-of-obsidian.css">
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="packages/dacsslide/presentation.css">    
+    <link rel="stylesheet" href="mobile_webapps.css">
+  </head>
+ 
+  <body onload="prettyPrint()">
+    <presentation slides="40">
+      <symbol id="qr">
+        <img src="img/qr.png">
+      </symbol>
+      <symbol id="qr_vsh"><img src="http://zxing.org/w/chart?cht=qr&chs=350x350&chld=M&choe=UTF-8&chl=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AValentyn+Shybanov%0AORG%3ATwinfield%0AURL%3Ahttp%3A%2F%2Folostan.name%2F%0AEMAIL%3Avshybanov%40twinfield.com%0AEND%3AVCARD"></symbol>
+      <symbol id="vsh">Valentyn Shybanov<div>Software architect, Twinfield</div>
+      </symbol>
+      
+      <symbol id="title1">Mobile</symbol>
+      <symbol id="title2">Web</symbol>
+      <symbol id="title3">Apps</symbol>
+      <symbol id="title4">With AngularJS</symbol>
+      <symbol id="nexus">
+        <div id="nexus_c" class="animated"></div>
+        <div id="nexus_c2" class="animated"></div>
+      </symbol>
+      <symbol id="angular_logo">
+        <img src="img/angularjs-logo.png">
+      </symbol>
+      <symbol id="chrome_logo">
+        <img src="img/Google-Chrome-icon.png">
+      </symbol>
+      <symbol id="chrome_sc">
+        <img src="img/chrome_sc.png">
+      </symbol>
+      <symbol id="normal_web">Normal websites</symbol>
+      <symbol id="sticker">
+        <span>manifest</span>
+      </symbol>
+      <symbol id="plus_manif">+ manifest file</symbol>
+      <symbol id="html5">
+        <img src="img/html5-topper.png">
+      </symbol>
+      <symbol id="h5_multi"><img src="img/class-header-multimedia.jpg"></symbol>
+      <symbol id="h5_perf"><img src="img/class-header-performance.jpg"></symbol>
+      <symbol id="h5_device"><img src="img/class-header-device.jpg"></symbol>
+      <symbol id="h5_offline"><img src="img/class-header-offline.jpg"></symbol>
+      <symbol id="ninja_icon"><img src="img/ninja_icon_128.png"></symbol>
+      <symbol id="meta" class="code"><pre class="prettyprint lang-html">&lt;meta name="mobile-web-app-capable" content="yes"&gt;</pre>
+      </symbol>
+      <symbol id="m_t1">Installs directly to the homescreen</symbol>
+      <symbol id="m_t2">Integrates into the OS task-switcher</symbol>
+      <symbol id="m_t3">Provides a full screen experience</symbol>
+      <symbol id="offline"><img src="img/offline.jpg"></symbol>
+      <symbol id="offline_t">Offline</symbol>
+      <symbol id="offline_c" class="code"><pre class="prettyprint lang-html">&lt;html manifest="example.appcache"&gt;
+&lt;/html&gt;</pre></symbol>
+      <symbol id="offline_c2" class="code"><pre class="prettyprint lang-bash">CACHE MANIFEST
+# 2010-06-18:v2
+
+# Explicitly cached 'master entries'.
+CACHE:
+/favicon.ico
+index.html
+stylesheet.css
+images/logo.png
+scripts/main.js
+
+# Resources that require the user to be online.
+NETWORK:
+*
+
+# static.html will be served if main.py is inaccessible
+# offline.jpg will be served in place of all images in images/large/
+# offline.html will be served in place of all other .html files
+FALLBACK:
+/main.py /static.html
+images/large/ images/offline.jpg</pre></symbol>
+        <symbol id="ang_large"><img src="img/AngularJS-large.png"></symbol>
+        <symbol id="ang_touch">Standart <span>ngTouch</span> module</symbol>
+        <symbol id="ang_touch_c" class="code"><pre class="prettyprint lang-html">&lt;div 
+      ng-show=&quot;swiped&quot;
+      ng-swipe-left=&quot;swiped=true&quot;&gt;
+      Swipe me  left
+&lt;/div&gt;
+&lt;div
+      ng-show=&quot;!swiped&quot;
+      ng-swipe-right=&quot;swiped=false&quot;&gt;
+      Swipe me right
+&lt;/div&gt;
+</pre></symbol>
+      <symbol id="time">
+        <img src="img/Infinity-Time1.jpg">
+      </symbol>
+      <symbol id="qr_demo">
+        <img src="img/qr_demo.png">
+      </symbol>        
+      <symbol id="demo">Small demo</symbol>
+      <symbol id="thnx">Thank you!</symbol>
+    </presentation>
+  </body>
+</html>
